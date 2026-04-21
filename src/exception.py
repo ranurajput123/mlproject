@@ -1,5 +1,6 @@
 import sys
 import logging
+from src.logger import logging
 
 ### how youe message should look like while exception error
 def error_message_detail(error,error_detail:sys):
@@ -11,7 +12,6 @@ def error_message_detail(error,error_detail:sys):
     return error_message
 
 
-
 class CustomException(Exception):
     def __init__(self, error_message, error_details:sys):
         super().__init__(error_message)
@@ -20,6 +20,7 @@ class CustomException(Exception):
     ### printing error message for exception
     def __str__(self):
         return self.error_message
+
 
 
     
